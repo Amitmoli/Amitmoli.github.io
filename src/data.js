@@ -14,6 +14,7 @@ export const profile = {
   phoneRaw: '919535656560',
   github: 'https://github.com/Amitmoli',
   linkedin: '', // add your LinkedIn URL here to show the button
+  photo: 'photo.jpg', // file in /public
   resume: '', // e.g. '/resume.pdf' after adding the file to /public
   company: 'Desalt Encore SheetMetal Pvt Ltd',
   title: 'Software Engineer · Full-Stack Developer',

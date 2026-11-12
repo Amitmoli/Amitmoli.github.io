@@ -321,7 +321,17 @@ function Hero() {
               animate={{ y: [0, -14, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
             >
-              <span className="grad-text">AM</span>
+              {profile.photo ? (
+                <img
+                  src={`${import.meta.env.BASE_URL}${profile.photo}`}
+                  alt={`${profile.name} portrait`}
+                  width="270"
+                  height="270"
+                  fetchpriority="high"
+                />
+              ) : (
+                <span className="grad-text">AM</span>
+              )}
             </motion.div>
           </motion.div>
           <motion.div className="chip mono c1" animate={{ y: [0, -10, 0] }} transition={{ duration: 5, repeat: Infinity }}>
