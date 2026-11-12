@@ -130,9 +130,10 @@ export const experience = [
   },
   {
     role: 'Junior Web Developer · Intern',
-    org: 'Cybrary Infotech Solutions',
-    period: 'Oct 2020 – Dec 2022',
+    org: 'SMK Solutions · Part-time · Remote',
+    period: 'Oct 2020 – Oct 2022',
     points: [
+      'Worked remotely as an intern and developer, learning core and advanced web technologies.',
       'Built, tested and maintained client websites across various platforms.',
     ],
   },
@@ -141,5 +142,5 @@ export const experience = [
 export const education = {
   degree: 'B.E. Mechanical Engineering',
   school: 'Basveshwara Engineering College, Bagalkot',
-  year: '2023',
+  year: '2015 – 2022',
 }
