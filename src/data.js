@@ -13,7 +13,7 @@ export const profile = {
   phone: '+91 95356 56560',
   phoneRaw: '919535656560',
   github: 'https://github.com/Amitmoli',
-  linkedin: '', // add your LinkedIn URL here to show the button
+  linkedin: 'https://www.linkedin.com/in/amit-moli-649402185',
   photo: 'photo.jpg', // file in /public
   resume: 'Amit_Moli_Resume.pdf', // file in /public
   company: 'Desalt Encore SheetMetal Pvt Ltd',
