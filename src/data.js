@@ -15,14 +15,14 @@ export const profile = {
   github: 'https://github.com/Amitmoli',
   linkedin: '', // add your LinkedIn URL here to show the button
   photo: 'photo.jpg', // file in /public
-  resume: '', // e.g. '/resume.pdf' after adding the file to /public
+  resume: 'Amit_Moli_Resume.pdf', // file in /public
   company: 'Desalt Encore SheetMetal Pvt Ltd',
   title: 'Software Engineer · Full-Stack Developer',
 }
 
 export const skillGroups = [
-  { title: 'Frontend', items: ['React', 'JavaScript', 'HTML & CSS', 'Responsive UI', 'Framer Motion'] },
-  { title: 'Backend', items: ['Node.js', 'Express', 'REST APIs', 'Role-based permissions'] },
+  { title: 'Frontend', items: ['React', 'React Native', 'JavaScript', 'HTML & CSS', 'MUI', 'Bootstrap', 'Framer Motion'] },
+  { title: 'Backend', items: ['Node.js', 'Express', 'Python FastAPI', 'REST APIs', 'JWT & encryption', 'Role-based permissions'] },
   { title: 'Data', items: ['MongoDB', 'SQL', 'Data modelling', 'Excel & report exports'] },
   { title: 'DevOps', items: ['GitHub Actions', 'CI/CD', 'PM2', 'Linux deploys', 'Git'] },
 ]
@@ -62,6 +62,20 @@ export const projects = [
     accent: '#b967ff',
   },
   {
+    title: 'Ticket Management Platform',
+    kicker: 'Web + Mobile · Full-stack',
+    description:
+      'A ticketing system where tickets are created through IVR, chatbot and SMS, wired to third-party APIs, with a React web app, a React Native mobile app and a secure FastAPI backend.',
+    highlights: [
+      'Multi-channel ticket creation: IVR, chatbot and SMS',
+      'Encrypted data transfer between client and API',
+      'Cross-platform mobile app sharing the same backend',
+    ],
+    tech: ['React', 'React Native', 'Python FastAPI', 'JWT'],
+    link: '',
+    accent: '#2cff9a',
+  },
+  {
     title: 'Mobile-Ready Interface',
     kicker: 'Frontend · UX',
     description:
@@ -81,11 +95,36 @@ export const experience = [
   {
     role: 'Software Engineer · Full-Stack Developer',
     org: 'Desalt Encore SheetMetal Pvt Ltd',
-    period: 'Present',
+    period: 'Mar 2025 – Present',
     points: [
       'Building and maintaining the Encore CRM across frontend, backend and deployment.',
       'Designed the permission catalogue and role-based access across modules.',
       'Set up GitHub Actions CI and UAT deploy pipelines with change detection and health checks.',
     ],
   },
+  {
+    role: 'Full Stack Developer',
+    org: 'Cybrary Infotech Solutions',
+    period: 'Dec 2022 – Dec 2024',
+    points: [
+      'Built responsive React interfaces and reusable components in a team of 4 to 6 developers.',
+      'Debugged and optimised application code, improving performance by 50%.',
+      'Built a ticket management platform (React + Python FastAPI) with IVR, chatbot and SMS ticket creation, plus a React Native mobile app.',
+      'Ran live demos for customers and supported client relationships.',
+    ],
+  },
+  {
+    role: 'Junior Web Developer · Intern',
+    org: 'Cybrary Infotech Solutions',
+    period: 'Oct 2020 – Dec 2022',
+    points: [
+      'Built, tested and maintained client websites across various platforms.',
+    ],
+  },
 ]
+
+export const education = {
+  degree: 'B.E. Mechanical Engineering',
+  school: 'Basveshwara Engineering College, Bagalkot',
+  year: '2023',
+}

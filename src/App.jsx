@@ -7,7 +7,7 @@ import {
   useTransform,
   AnimatePresence,
 } from 'framer-motion'
-import { profile, skillGroups, marquee, projects, experience } from './data'
+import { profile, skillGroups, marquee, projects, experience, education } from './data'
 
 /* ---------- helpers ---------- */
 
@@ -485,6 +485,17 @@ function Experience() {
               </Spotlight>
             </Reveal>
           ))}
+          <Reveal i={experience.length} className="t-item">
+            <Spotlight>
+              <div className="t-head">
+                <h3>Education</h3>
+                <span className="period mono">{education.year}</span>
+              </div>
+              <div className="org">
+                {education.degree} · {education.school}
+              </div>
+            </Spotlight>
+          </Reveal>
         </div>
       </div>
     </section>
