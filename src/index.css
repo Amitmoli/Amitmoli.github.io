@@ -164,6 +164,15 @@ h2 { font-size: clamp(2rem, 5vw, 3.3rem); letter-spacing: -1px; margin: 10px 0 4
 .contact-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; }
 footer { padding: 36px 0 50px; text-align: center; color: var(--muted); font-size: 0.88rem; border-top: 1px solid var(--glass-border); }
 
+/* update toast */
+.update-toast { position: fixed; right: 20px; bottom: 20px; z-index: 200; display: flex; align-items: center; gap: 14px; padding: 14px 16px; border-radius: 18px; background: rgba(13, 13, 26, 0.82); border: 1px solid var(--glass-border); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 229, 255, 0.15); max-width: calc(100vw - 32px); }
+.update-text { display: flex; flex-direction: column; line-height: 1.3; font-size: 0.82rem; color: var(--muted); }
+.update-text strong { color: var(--text); font-size: 0.95rem; }
+.update-refresh { padding: 8px 16px; border-radius: 999px; background: var(--grad); color: #07070d; font-weight: 700; font-size: 0.85rem; }
+.update-close { color: var(--muted); font-size: 0.9rem; padding: 4px; }
+.update-close:hover { color: var(--text); }
+@media (max-width: 520px) { .update-toast { left: 16px; right: 16px; bottom: 16px; } }
+
 /* responsive */
 @media (max-width: 860px) {
   .hero-grid, .about-grid { grid-template-columns: 1fr; }

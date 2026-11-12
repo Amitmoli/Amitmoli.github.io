@@ -564,11 +564,85 @@ function Contact() {
   )
 }
 
+/* ---------- update notice ---------- */
+
+function UpdateToast() {
+  const [ready, setReady] = useState(false)
+  const [dismissed, setDismissed] = useState(false)
+
+  useEffect(() => {
+    // Only meaningful in a production build, where the build id is real.
+    if (import.meta.env.DEV || typeof __BUILD_ID__ === 'undefined') return
+
+    let stop = false
+    const check = async () => {
+      try {
+        const res = await fetch(`${import.meta.env.BASE_URL}version.json?t=${Date.now()}`, {
+          cache: 'no-store',
+        })
+        if (!res.ok) return
+        const { build } = await res.json()
+        if (!stop && build && build !== __BUILD_ID__) {
+          setReady(true)
+          setDismissed(false)
+        }
+      } catch {
+        /* offline or blocked: try again next time */
+      }
+    }
+
+    const onVisible = () => {
+      if (document.visibilityState === 'visible') check()
+    }
+
+    const id = setInterval(check, 60 * 1000)
+    document.addEventListener('visibilitychange', onVisible)
+    window.addEventListener('focus', check)
+    check()
+
+    return () => {
+      stop = true
+      clearInterval(id)
+      document.removeEventListener('visibilitychange', onVisible)
+      window.removeEventListener('focus', check)
+    }
+  }, [])
+
+  return (
+    <AnimatePresence>
+      {ready && !dismissed && (
+        <motion.div
+          className="update-toast"
+          role="status"
+          aria-live="polite"
+          initial={{ opacity: 0, y: 40, scale: 0.9 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          exit={{ opacity: 0, y: 40, scale: 0.9 }}
+          transition={{ type: 'spring', stiffness: 260, damping: 22 }}
+        >
+          <span className="dot" />
+          <div className="update-text">
+            <strong>Portfolio updated</strong>
+            <span>A new version just went live.</span>
+          </div>
+          <button className="update-refresh" onClick={() => window.location.reload()}>
+            Refresh
+          </button>
+          <button className="update-close" aria-label="Dismiss" onClick={() => setDismissed(true)}>
+            ✕
+          </button>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  )
+}
+
 /* ---------- app ---------- */
 
 export default function App() {
   return (
     <>
+      <UpdateToast />
       <Background />
       <ScrollProgress />
       <CursorGlow />
