@@ -21,10 +21,10 @@ export const profile = {
 }
 
 export const skillGroups = [
-  { title: 'Frontend', items: ['React', 'React Native', 'JavaScript', 'HTML & CSS', 'MUI', 'Bootstrap', 'Framer Motion'] },
-  { title: 'Backend', items: ['Node.js', 'Express', 'Python FastAPI', 'REST APIs', 'JWT & encryption', 'Role-based permissions'] },
+  { title: 'Frontend', items: ['React', 'React Native', 'JavaScript', 'HTML & CSS', 'Tailwind CSS', 'MUI', 'Bootstrap', 'Responsive Web Design', 'Framer Motion'] },
+  { title: 'Backend', items: ['MERN Stack', 'Node.js', 'Express', 'Python', 'Python FastAPI', 'REST APIs', 'Postman', 'Swagger API', 'JWT & encryption', 'Role-based permissions'] },
   { title: 'Data', items: ['MongoDB', 'SQL', 'Data modelling', 'Excel & report exports'] },
-  { title: 'DevOps', items: ['GitHub Actions', 'CI/CD', 'PM2', 'Linux deploys', 'Git'] },
+  { title: 'DevOps', items: ['GitHub Actions', 'CI/CD', 'PM2', 'Linux deploys', 'Git', 'Version Control', 'Jira'] },
 ]
 
 export const marquee = [
@@ -60,6 +60,20 @@ export const projects = [
     tech: ['GitHub Actions', 'rsync', 'PM2', 'Linux'],
     link: '',
     accent: '#b967ff',
+  },
+  {
+    title: 'Web-Based 2D Design Tool',
+    kicker: 'Frontend · Interactive',
+    description:
+      'A dynamic web-based 2D design tool with multiple advanced features and interactive components, built alongside the CRM at Desalt Encore.',
+    highlights: [
+      'Interactive, component-driven design canvas',
+      'Multiple advanced editing features',
+      'Built on the MERN stack',
+    ],
+    tech: ['MERN Stack', 'React', 'Node.js'],
+    link: '',
+    accent: '#ffb347',
   },
   {
     title: 'Ticket Management Platform',
@@ -99,6 +113,7 @@ export const experience = [
     points: [
       'Building and maintaining the Encore CRM across frontend, backend and deployment.',
       'Designed the permission catalogue and role-based access across modules.',
+      'Building a dynamic web-based 2D design tool with multiple advanced features and interactive components.',
       'Set up GitHub Actions CI and UAT deploy pipelines with change detection and health checks.',
     ],
   },
